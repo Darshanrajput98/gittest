@@ -1,5 +1,5 @@
 name: scp files
-on: [push]
+on: [master]
 jobs:
 
   build:
@@ -8,8 +8,8 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Copy folder content recursively to remote
-        uses: garygrossgarten/github-action-scp@release
-        with:
+    uses: garygrossgarten/github-action-scp@release
+       with:
           local: gittest
           remote: gittest/assets,/index.html
           host: 13.234.231.222
