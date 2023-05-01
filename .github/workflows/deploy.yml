@@ -18,7 +18,7 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: 65.2.188.94
+        server: 13.233.9.70
         username: ubuntu
         password: ${{ secrets.MASTER_PASSWORD }}
         exclude: |
