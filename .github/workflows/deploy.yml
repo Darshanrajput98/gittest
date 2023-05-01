@@ -7,12 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: copy file via ssh password
-      uses: appleboy/scp-action@master
-      with:
-        host: 13.234.231.222
-        username: ubuntu
-        password: ${{ secrets.MASTER_PASSWORD }}
-        port: 22
-        source: "/assets,/index.html"
-        target: /var/www/html
+    - name: Copy folder content recursively to remote
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: gittest
+          remote: gittest/assets,/index.html
+          host: 13.234.231.222
+          username: ubuntu
+          password: ${{ secrets.MASTER_PASSWORD }}
