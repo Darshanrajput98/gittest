@@ -1,17 +1,1 @@
-name: scp files
-on: [master]
-jobs:
 
-  build:
-    name: Build
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Copy folder content recursively to remote
-    uses: garygrossgarten/github-action-scp@release
-       with:
-          local: gittest
-          remote: gittest/assets,/index.html
-          host: 13.234.231.222
-          username: ubuntu
-          password: ${{ secrets.MASTER_PASSWORD }}
