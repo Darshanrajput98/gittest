@@ -1,1 +1,18 @@
+name: scp files
+on: [push]
+jobs:
 
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v0.1.4
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: 13.234.231.222
+        username: ubuntu
+        password: ${{ secrets.MASTER_PASSWORD }}
+        port: 22
+        source: "/assets,/index.html"
+        target: /var/www/html
