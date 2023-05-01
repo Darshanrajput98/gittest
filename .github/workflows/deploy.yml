@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v0.1.4
     - name: copy file via ssh password
-      uses: appleboy/scp-action@v0.1.4
+      uses: appleboy/scp-action@master
       with:
         host: 13.234.231.222
         username: ubuntu
