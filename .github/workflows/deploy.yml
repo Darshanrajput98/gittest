@@ -17,6 +17,4 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
           source: "*"
           target: "/var/www/html/"
-      - name: Update Directory Permissions
-        run: |
-          sudo chmod 777 /var/www/html/*
+      
