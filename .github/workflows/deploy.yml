@@ -13,8 +13,8 @@ jobs:
         with:
           HOST: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
-          KEY: ${{ secrets.SSH_KEY }
-          port: 22
+          PORT: 22
+          KEY: ${{ secrets.SSH_KEY }}
           source: "*"
-          target: /var/www/html/
+          target: "/var/www/html/"
       
