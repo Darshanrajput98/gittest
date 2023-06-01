@@ -11,10 +11,10 @@ jobs:
       - name: Deploy source-code
         uses: appleboy/scp-action@v0.1.4
         with:
-          host: 3.111.150.192
-          username: Administrator
-          password: o8(dqi$aY-*zLrFgL&l42Eef$z4%Y)oy
+          HOST: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          KEY: ${{ secrets.SSH_KEY }
           port: 22
           source: "*"
-          target: C:\Users\Administrator\Desktop\new
+          target: "/var/www/html/"
       
