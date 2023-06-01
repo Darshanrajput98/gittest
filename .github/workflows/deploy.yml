@@ -16,5 +16,5 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }
           port: 22
           source: "*"
-          target: "/var/www/html/"
+          target: /var/www/html/
       
